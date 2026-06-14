@@ -9,7 +9,7 @@ export default defineConfig({
 			title: 'Chat Guidelines',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/petermunro/chatguide' }],
 			sidebar: [
-				"before-you-post",
+				'index',
 				{
 					label: 'Guides',
 					items: [
@@ -19,7 +19,4 @@ export default defineConfig({
 			],
 		}),
 	],
-	redirects: {
-		'/': '/before-you-post',
-	},
 });
