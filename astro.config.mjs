@@ -6,21 +6,20 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Chat Guidelines',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/petermunro/chatguide' }],
 			sidebar: [
+				"before-you-post",
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ autogenerate: { directory: 'guides' } }
 					],
-				},
-				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
 				},
 			],
 		}),
 	],
+	redirects: {
+		'/': '/before-you-post',
+	},
 });
